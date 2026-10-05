@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sabor & Arte</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>🍽️ Sabor & Arte</h1>
+
+        <nav>
+            <a href="#inicio">Início</a>
+            <a href="#cardapio">Cardápio</a>
+            <a href="#carrinho">Carrinho</a>
+            <a href="#cadastro">Cadastrar Produto</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <section id="inicio">
+            <h2>Pratos em destaque</h2>
+
+            <div class="carousel">
+                <button id="anterior">❮</button>
+
+                <div id="slide"></div>
+
+                <button id="proximo">❯</button>
+            </div>
+        </section>
+
+        <section id="cardapio">
+            <h2>Cardápio</h2>
+            <div id="listaProdutos" class="produtos"></div>
+        </section>
+
+        <section id="carrinho">
+
+            <h2>🛒 Carrinho</h2>
+
+            <div id="listaCarrinho"></div>
+
+            <div class="resumo">
+                <p>
+                    Subtotal:
+                    <strong id="subtotal">R$ 0,00</strong>
+                </p>
+
+                <p>
+                    Entrega:
+                    <strong id="taxa">R$ 0,00</strong>
+                </p>
+
+                <p class="total">
+                    Total:
+                    <strong id="total">R$ 0,00</strong>
+                </p>
+            </div>
+
+            <h3>Tipo de entrega</h3>
+
+            <select id="tipoEntrega">
+                <option value="retirada">Retirada</option>
+                <option value="local">Consumo no local</option>
+                <option value="delivery">Delivery</option>
+            </select>
+
+            <h3>Dados do cliente</h3>
+
+            <input
+                type="text"
+                id="nomeCliente"
+                placeholder="Nome do cliente"
+            >
+
+            <button id="finalizar">
+                Finalizar pedido
+            </button>
+
+        </section>
+
+        <section id="cadastro">
+
+            <h2>➕ Cadastrar Produto</h2>
+
+            <form id="formProduto">
+
+                <input
+                    type="text"
+                    id="nomeProduto"
+                    placeholder="Nome do produto"
+                    required
+                >
+
+                <input
+                    type="text"
+                    id="descricaoProduto"
+                    placeholder="Descrição"
+                    required
+                >
+
+                <input
+                    type="number"
+                    id="precoProduto"
+                    placeholder="Preço"
+                    step="0.01"
+                    required
+                >
+
+                <input
+                    type="text"
+                    id="categoriaProduto"
+                    placeholder="Categoria"
+                    required
+                >
+
+                <input
+                    type="text"
+                    id="imagemProduto"
+                    placeholder="URL da imagem"
+                    required
+                >
+
+                <button type="submit">
+                    Cadastrar
+                </button>
+
+            </form>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>© 2026 - Sabor & Arte</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
